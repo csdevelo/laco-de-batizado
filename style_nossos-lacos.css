@@ -4,7 +4,7 @@
     --main-color: #DBB4AD;
 	--color-font-navbar: #b0702c;
 	--color-titulos: #faada0;
-	--bg: #edfcfc;
+	--bg: #f7fbfb;
 	--bg-header: #c1fafc;
 	--color-botton: #faada0
 }
@@ -23,21 +23,23 @@ body {
 	font-size: 1em;
 	
 	color: black;
+	overflow-x: hidden; /* evita barra lateral horizontal */
 }
 
+/*inicio estilos menu navegação */
 header {
 	/*border: 1px dotted blue;*/
 
 	position: fixed;
 	background-color: var(--bg-header);
 	color: var(--color-font-navbar);
-	padding: 5px;
+	/*padding: 5px;*/
 	width: 100%;
 	height: 9vh;
 	border-bottom: 2px solid #04f0f8;
 
 	display: flex;
-	flex-flow: row wrap;
+	/*flex-flow: row wrap;*/
 	justify-content: space-between; /**o menu navegação vai ficar posicionado na margem direita**/
 	align-items: center; /**o container do menu navegação vai ficar posicionado no meio do container, lembrando q o align-items posiciona os itens do eixo transversal - "cross-axis" **/
 }
@@ -46,20 +48,26 @@ header img {
 	flex: 0 0 180px;
 	width: 58x;
 	height: 58px;
-	
 }
 
-header nav {
-	/*border: 1px dotted blue;*/
-
-	display: flex;
-}
-
-header nav a {
+.container-header-links ul {
 	text-decoration: none;
-	color: var(--color-font-navbar);
-	padding: 12px;
+	list-style: none;
+	padding: 8px;
+	display: flex;
+	gap: 1rem;
 }
+
+.container-header-links ul li a {
+	color: var(--color-font-navbar);
+}
+
+.container-header-links ul li a:hover { 
+	color: #d07f05; 
+}
+
+/*fim estilos menu navegação */
+
 
 
 h1 {
@@ -71,7 +79,7 @@ h1 {
 }
 
 .container-nossos-lacos {
-    border: 2px dashed orangered;
+    /*border: 2px dashed orangered;*/
 
     width: 100%;
     min-height: 100vh;   
@@ -80,8 +88,7 @@ h1 {
 }
 
 .catalogo {
-    border: 2px dashed blue;
-
+    /*border: 2px dashed blue;*/
     width: 80%;
     margin: auto;
 
@@ -110,8 +117,11 @@ h1 {
 }
 
 .item {
-    border: 2px dashed pink;
-    border-radius: 5px;
+    /*border: 2px dashed pink;*/
+    background-color: #edfcfc;
+	border-radius: 12px;
+	margin: 12px 0; /* 12px em cima/embaixo, 0 nas laterais */
+	padding: 12px; /* 12px ao redor dos itens da div, criando uma moldura ao redor da foto do produto e assim, torna a visualização mais agradavel */
 
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);   
 }
@@ -120,7 +130,14 @@ h1 {
     transform: translateY(-6px) scale(1.02);
 }
 
-/*  
-margin-top: 92px;
-    display: inline-block;  
-*/
+footer {
+	/*border: 1px dotted blue;*/
+
+	background-color: var(--bg-header);
+	color: var(--color-font-navbar);
+	padding: 3px;
+	width: 100%;
+
+	text-align: center;
+	font-size: 0.85rem;
+}
