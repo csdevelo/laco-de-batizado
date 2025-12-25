@@ -45,7 +45,7 @@ header {
 }
 
 header img {
-	flex: 0 0 180px;
+	flex: 1 1 180px;
 	width: 58x;
 	height: 58px;
 }
